@@ -41,7 +41,7 @@ export const MainContextProvider: React.FC<PropsType> = (props) => {
 		setMovieList(responseMovieList);
 		setMovie(responseMovieList[movieCounter]);
 		setLoading(false);
-	}, [movieCounter]);
+	}, []);
 
 	useEffect(() => {
 		getAllMoviesHandler();

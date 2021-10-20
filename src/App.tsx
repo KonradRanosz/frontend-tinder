@@ -37,7 +37,7 @@ export const App: React.FC = () => {
 				</>
 			)}
 			{movie && !theEnd && (
-				<div key={movie.id} className={styles.card} data-testid="card">
+				<div key={movie.id} className={styles.card}>
 					<TitleHeader
 						title={movie.title}
 						summary={movie.summary}

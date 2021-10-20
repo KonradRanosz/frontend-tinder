@@ -1,0 +1,205 @@
+:root {
+}
+
+.logo {
+	text-align: center;
+	margin: 3px;
+	color: salmon;
+}
+
+.titleHeader {
+	text-align: center;
+	box-shadow: -8px -8px 30px rgb(255 255 255 / 95%),
+		8px 8px 30px rgb(174 174 192 / 35%),
+		inset -8px -8px 12px rgb(255 255 255 / 15%),
+		inset 8px 8px 8px rgb(174 174 192 / 4%);
+	border-radius: 1em;
+	padding: 5px;
+	margin: 10px auto;
+	color: #4b5563;
+	font-size: 1em;
+}
+.titleHeader > h3,
+.titleHeader > p {
+	margin: 3px;
+}
+
+.image {
+	box-shadow: -8px -8px 30px rgb(255 255 255 / 95%),
+		8px 8px 30px rgb(174 174 192 / 35%),
+		inset -8px -8px 12px rgb(255 255 255 / 15%),
+		inset 8px 8px 8px rgb(174 174 192 / 4%);
+	border-radius: 1em;
+	object-fit: cover;
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	height: 43vh;
+}
+@media (min-width: 880px) {
+	.image {
+		/* height: 70vh; */
+		height: 50%;
+	}
+}
+
+.card {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 560px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 2em 0;
+}
+
+.button {
+	border-radius: 100%;
+	position: relative;
+	padding: 20px;
+	cursor: pointer;
+	border: none;
+	box-shadow: -8px -8px 30px rgb(255 255 255 / 95%),
+		8px 8px 30px rgb(174 174 192 / 35%),
+		inset -8px -8px 12px rgb(255 255 255 / 15%),
+		inset 8px 8px 8px rgb(174 174 192 / 4%);
+	background-color: #f0f0f3;
+}
+.button:hover {
+	background-color: white;
+}
+
+.textUnder {
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-weight: bolder;
+	color: #4b5563;
+}
+
+.premium {
+	box-shadow: -8px -8px 30px rgb(255 255 255 / 95%),
+		8px 8px 30px rgb(174 174 192 / 35%),
+		inset -8px -8px 12px rgb(255 255 255 / 15%),
+		inset 8px 8px 8px rgb(174 174 192 / 4%);
+	margin: 0 auto;
+	min-width: 250px;
+	/* max-width: 500px; */
+	text-align: center;
+	padding: 20px;
+	border-radius: 1em;
+	background-color: #d1fae5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.premium button {
+	padding: 10px 20px;
+	background: rgb(131, 58, 180);
+	background: linear-gradient(
+		40deg,
+		rgba(131, 58, 180, 1) 0%,
+		rgba(253, 29, 29, 1) 50%,
+		rgba(252, 176, 69, 1) 100%
+	);
+	border-radius: 2em;
+	border: none;
+	font-weight: bolder;
+	color: white;
+	cursor: pointer;
+}
+
+.swipeParent {
+	position: relative;
+	cursor: grab;
+	padding: 20px;
+	border-radius: 1em;
+	box-shadow: -8px -8px 30px rgb(255 255 255 / 95%),
+		8px 8px 30px rgb(174 174 192 / 35%),
+		inset -8px -8px 12px rgb(255 255 255 / 15%),
+		inset 8px 8px 8px rgb(174 174 192 / 4%);
+}
+
+@keyframes accept {
+	0% {
+		background-color: lightgreen;
+	}
+
+	100% {
+		background-color: f0f0f3;
+	}
+}
+@keyframes reject {
+	0% {
+		background-color: lightcoral;
+	}
+
+	100% {
+		background-color: f0f0f3;
+	}
+}
+.accept {
+	animation-name: accept;
+	animation-duration: 0.2s;
+}
+.reject {
+	animation-name: reject;
+	animation-duration: 0.2s;
+}
+.active {
+	background-color: #dad59280;
+}
+.swipeParent div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin2 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+.spin {
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	color: rgb(218, 68, 151);
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.spin2 {
+	animation-name: spin2;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	color: rgb(72, 33, 212);
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}

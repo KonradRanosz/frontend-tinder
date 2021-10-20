@@ -1,0 +1,18 @@
+[
+	{
+		"id": "il9np630",
+		"imageURL": "https://fwcdn.pl/fpo/06/60/660/6924574.3.jpg",
+		"title": "Gorączka",
+		"summary": "Sensacyjny",
+		"rating": "0",
+		"votes": { "positive": 1, "negative": 1 }
+	},
+	{
+		"id": "xi2ij563",
+		"imageURL": "https://fwcdn.pl/fpo/10/68/1068/7500874.3.jpg",
+		"title": "Pluton",
+		"summary": "Dramat / Wojenny",
+		"rating": "0",
+		"votes": { "positive": 1, "negative": 1 }
+	}
+]

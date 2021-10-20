@@ -4,6 +4,6 @@ import { getAllMoviesHttp } from "./services";
 // check mock
 test("render services", async () => {
 	const data = await getAllMoviesHttp();
-	console.log("data", data);
+	console.log("dataa", data);
 	expect(data).toBeTruthy();
 });

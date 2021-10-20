@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Imovie } from "../types/types";
 import {
 	getAllMoviesHttp,
@@ -35,17 +35,17 @@ export const MainContextProvider: React.FC<PropsType> = (props) => {
 	const [theEnd, setTheEnd] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(true);
 
-	useEffect(() => {
-		getAllMoviesHandler();
-	}, []);
-
-	const getAllMoviesHandler = async () => {
+	const getAllMoviesHandler = useCallback(async () => {
 		setLoading(true);
 		const responseMovieList: Imovie[] | [] = await getAllMoviesHttp();
 		setMovieList(responseMovieList);
 		setMovie(responseMovieList[movieCounter]);
 		setLoading(false);
-	};
+	}, [movieCounter]);
+
+	useEffect(() => {
+		getAllMoviesHandler();
+	}, [getAllMoviesHandler]);
 
 	const rejectHandlers = async (id: string) => {
 		putRejectIdMovie(id);
@@ -70,8 +70,6 @@ export const MainContextProvider: React.FC<PropsType> = (props) => {
 			setMovie(null);
 			setTheEnd(true);
 		}
-		// setMovie(movieList[movieCounter + 1]);
-		// setMovieCounter(movieCounter + 1);
 	};
 
 	const likeHandler = async (id: string) => {

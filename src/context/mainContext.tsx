@@ -35,17 +35,17 @@ export const MainContextProvider: React.FC<PropsType> = (props) => {
 	const [theEnd, setTheEnd] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(true);
 
-	const getAllMoviesHandler = useCallback(async () => {
+	const getAllMoviesHandler = async () => {
 		setLoading(true);
 		const responseMovieList: Imovie[] | [] = await getAllMoviesHttp();
 		setMovieList(responseMovieList);
 		setMovie(responseMovieList[movieCounter]);
 		setLoading(false);
-	}, []);
+	};
 
 	useEffect(() => {
 		getAllMoviesHandler();
-	}, [getAllMoviesHandler]);
+	}, []);
 
 	const rejectHandlers = async (id: string) => {
 		putRejectIdMovie(id);

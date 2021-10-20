@@ -21,7 +21,7 @@ jobs:
                   npm test
             - name: Deploy to GH Pages
               run: |
-                  git config --global user.email ${{secrets.EMAIL}}
-                  git config --global user.name ${{secrets.USERNAME}}
-                  git remote set-url origin ${{secrets.ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/frontend-tinder.git
+                  git config --global user.email ${{secrets.GITHUB_EMAIL}}
+                  git config --global user.name ${{secrets.GITHUB_USERNAME}}
+                  git remote set-url origin ${{secrets.GITHUB_ACCESS_TOKEN}}@github.com/${{secrets.GITHUB_USERNAME}}/frontend-tinder.git
                   npm run deploy

@@ -2,7 +2,7 @@ import axios from "axios";
 import { Imovie } from "../types/types";
 import { AxiosResponse } from "axios";
 
-axios.defaults.baseURL = "http://movietinder.nemezisff.ct8.pl";
+axios.defaults.baseURL = "https://movietinder.nemezisff.ct8.pl";
 
 export const getAllMoviesHttp = async () => {
 	try {

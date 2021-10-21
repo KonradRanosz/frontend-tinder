@@ -39,7 +39,7 @@ export const MainContextProvider: React.FC<PropsType> = (props) => {
 		setLoading(true);
 		const responseMovieList: Imovie[] | [] = await getAllMoviesHttp();
 		setMovieList(responseMovieList);
-		setMovie(responseMovieList[movieCounter]);
+		setMovie(responseMovieList[0]);
 		setLoading(false);
 	}, []);
 

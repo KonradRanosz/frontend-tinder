@@ -38,8 +38,8 @@
 }
 @media (min-width: 880px) {
 	.image {
-		/* height: 70vh; */
-		height: 50%;
+		height: 60vh;
+		/* height: 50%; */
 	}
 }
 
